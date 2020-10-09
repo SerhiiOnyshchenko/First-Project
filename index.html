@@ -1,0 +1,411 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./css/style.css" />
+    <title>MyPortfolio</title>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/material-design-iconic-font/2.2.0/css/material-design-iconic-font.min.css"
+    />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript">
+      $(document).ready(function () {
+        $('a[href^="#0"]').click(function () {
+          event.preventDefault();
+          elementClick = $(this).attr("href");
+          destination = $(elementClick).offset().top;
+          if ($.browser.safari) {
+            $("body").animate({ scrollTop: destination }, 1100);
+          } else {
+            $("html").animate({ scrollTop: destination }, 1100);
+          }
+          return false;
+        });
+      });
+      $(function () {
+        $('a[href^="#"]').on("click", function (event) {
+          // отменяем стандартное действие
+          event.preventDefault();
+
+          var sc = $(this).attr("href"),
+            dn = $(sc).offset().top;
+          /*
+           * sc - в переменную заносим информацию о том, к какому блоку надо перейти
+           * dn - определяем положение блока на странице
+           */
+
+          $("html, body").animate({ scrollTop: dn }, 1000);
+
+          /*
+           * 1000 скорость перехода в миллисекундах
+           */
+        });
+      });
+    </script>
+  </head>
+  <body>
+    <section id="1" class="main">
+      <!-- <a class="scrolling" href="#1"></a> -->
+      <header>
+        <div class="header">
+          <div class="header-contaier">
+            <div class="header__body">
+              <div class="logo">
+                <img src=".//img/icon/Logo.png" alt="Logo" />
+              </div>
+              <div class="header__buger">
+                <span></span>
+              </div>
+              <nav class="header__menu">
+                <ul class="nav">
+                  <li class="nav-item">
+                    <a class="nav-link" href="#1">Home</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#2">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#3">Services</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#4">Portfolio</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#5">Testimonials</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#6">News</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link" href="#7">Contact</a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </div>
+        </div>
+      </header>
+      <div class="wrapper">
+        <h1 class="titel-h1">I Am<span> Photographer</span></h1>
+      </div>
+      <button class="btn-scroll">
+        <a class="scrolling" href="#1"
+          ><img src=".//img/icon/scroll.png" alt="scroll"
+        /></a>
+      </button>
+    </section>
+    <section id="2" class="about">
+      <div class="wrapper">
+        <div class="box-about">
+          <div class="box-about__item">
+            <img
+              class="box-about__back"
+              src=".//img/work.png"
+              alt="Workplace"
+            />
+            <p class="box-about__vertical">Work Place</p>
+            <img class="box-about__front" src="./img/photo.jpg" alt="Photo" />
+          </div>
+          <div class="box-about__item2">
+            <h2 class="titel-h2">About Me</h2>
+            <p class="box-about__text">
+              The quick, brown fox jumps over a lazy dog. DJs flock by when MTV
+              ax quiz prog. Junk MTV quiz graced by fox whelps. Bawds jog, flick
+              quartz, vex nymphs. Waltz, bad nymph, for quick jigs vex!
+            </p>
+            <div class="progress-bar">
+              <div class="progress-bar-line progress-bar-ht"></div>
+              <div class="progress-bar-text">
+                <p>Adobe Photoshop</p>
+                <p>100%</p>
+              </div>
+              <div class="progress-bar-line progress-bar-css"></div>
+              <div class="progress-bar-text">
+                <p>Adobe Indesign</p>
+                <p>85%</p>
+              </div>
+              <div class="progress-bar-line progress-bar-js"></div>
+              <div class="progress-bar-text">
+                <p>Adobe XD</p>
+                <p>60%</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="3" class="section-services">
+      <div class="wrapper">
+        <h2 class="titel-h2 text-centr">My Services</h2>
+        <p class="text-centr after-titel">
+          Check out all my services and think what do you want
+        </p>
+        <div class="services">
+          <div class="services-item">
+            <div class="services__icon services__design"></div>
+            <h3 class="titel-h3">Graphic Design</h3>
+            <div class="services__text">
+              When your customers can buy what you sell from others, that’s
+              called competition. That also makes it a for commodity.
+            </div>
+            <a class="services__link" href="#"><span>Read More</span></a>
+          </div>
+          <div class="services-item">
+            <div class="services__icon services__photo"></div>
+            <h3 class="titel-h3">Photography</h3>
+            <div class="services__text">
+              Your customers can buy what you sell from the others, that’s
+              called competition. That also makes it a Line Miliye dilam
+              commodity.
+            </div>
+            <a class="services__link" href="#"><span>Read More</span></a>
+          </div>
+          <div class="services-item">
+            <div class="services__icon services__web"></div>
+            <h3 class="titel-h3">Web Design</h3>
+            <div class="services__text">
+              Customers can buy what you sell from others, that’s called
+              competition. That also makes it a commodity That make you sence
+            </div>
+            <a class="services__link" href="#"><span>Read More</span></a>
+          </div>
+          <div class="services-item">
+            <div class="services__icon services__media"></div>
+            <h3 class="titel-h3">Social Media</h3>
+            <div class="services__text">
+              When your customers can buy what you sell from others, that’s
+              called competition. That also makes it a for commodity.
+            </div>
+            <a class="services__link" href="#"><span>Read More</span></a>
+          </div>
+          <div class="services-item">
+            <div class="services__icon services__mark"></div>
+            <h3 class="titel-h3">Marketing</h3>
+            <div class="services__text">
+              When your customers can buy what you sell from others, that’s
+              called competition. That also makes it a commodity.
+            </div>
+            <a class="services__link" href="#"><span>Read More</span></a>
+          </div>
+          <div class="services-item">
+            <div class="services__icon services__app"></div>
+            <h3 class="titel-h3">App Developing</h3>
+            <div class="services__text">
+              When your customers can buy what you sell from others, that’s
+              called competition. That also makes it a commodity.
+            </div>
+            <a class="services__link" href="#"><span>Read More</span></a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="4" class="section-portfolio">
+      <div class="wrapper">
+        <h2 class="titel-h2 text-centr">My Portfolio</h2>
+        <p class="text-centr after-titel">
+          Here is all my work that i maked for some great people
+        </p>
+        <div class="portfolio">
+          <div class="portfolio-item portfolio-01">
+            <div class="portfolio-thumb">
+              <img src=".//img/work_01.png" alt="Work 01" />
+            </div>
+          </div>
+          <div class="portfolio-item portfolio-02">
+            <div class="portfolio-thumb">
+              fgn
+              <img src=".//img/work_02.png" alt="Work 02" />
+            </div>
+          </div>
+          <div class="portfolio-item portfolio-03">
+            <div class="portfolio-thumb">
+              <img src=".//img/work_03.png" alt="Work 03" />
+            </div>
+          </div>
+          <div class="portfolio-item portfolio-04">
+            <div class="portfolio-thumb">
+              <img src=".//img/work_04.png" alt="Work 04" />
+            </div>
+          </div>
+          <div class="portfolio-item portfolio-05">
+            <div class="portfolio-thumb">
+              <img src=".//img/work_05.png" alt="Work 05" />
+            </div>
+          </div>
+          <div class="portfolio-item portfolio-06">
+            <div class="portfolio-thumb">
+              <img src=".//img/work_06.png" alt="Work 06" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="section-baner">
+      <div class="wrapper">
+        <p class="text-centr after-titel">Do you love my work?</p>
+        <h2 class="text-centr">Available For Freelance Work!</h2>
+        <a href="#7" class="btn">Hire Me</a>
+      </div>
+    </section>
+    <section id="5" class="section-feedback">
+      <div class="wrapper">
+        <h2 class="titel-h2 text-centr">Testimonials</h2>
+        <p class="text-centr after-titel">
+          Lets check what people say about me and my work
+        </p>
+
+        <div class="feedback">
+          <div class="feedback-item">
+            <div class="feedback-top">
+              <div class="feedback-link">
+                <img src=".//img/photo-fb01.png" alt="clark" />
+              </div>
+              <div class="feedback-name">
+                <a href="#" class="feedback-name__titel">Jonathon Lee</a>
+                <p class="feedback-name__job">UI/UX Designer</p>
+              </div>
+            </div>
+            <div class="feedback-text">
+              <p>
+                Finding the right partner to help make this goal a reality was
+                key. The smart and creative team at Blue Fountain Media has
+                helped anthony.com establish itself as a successful online
+                business and become synonymous with an enjoyable solutions.
+              </p>
+            </div>
+          </div>
+          <div class="feedback-item">
+            <div class="feedback-top">
+              <div class="feedback-link">
+                <img src=".//img/photo-fb02.png" alt="clark" />
+              </div>
+              <div class="feedback-name">
+                <a href="#" class="feedback-name__titel">Emalia Clark</a>
+                <p class="feedback-name__job">Frontend Dev</p>
+              </div>
+            </div>
+            <div class="feedback-text">
+              <p>
+                Blue Fountain Media came up with the design on their first try,
+                delivered the complete package on a reasonable budget, and
+                continued to fine-tune it. That wasn't enough -- they also
+                created a plan to market the website and increase traffic.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="6" class="section-experient">
+      <div class="wrapper">
+        <div class="expirient">
+          <div class="expirient-item">
+            <div class="expirient-icon expirient-icon__01"></div>
+            <p>
+              <span>1325</span>
+              Happy Customers
+            </p>
+          </div>
+          <div class="expirient-item">
+            <div class="expirient-icon expirient-icon__02"></div>
+
+            <p>
+              <span>1214</span>
+              Completed Project
+            </p>
+          </div>
+          <div class="expirient-item">
+            <div class="expirient-icon expirient-icon__03"></div>
+            <p>
+              <span>10</span>
+              Years Experience
+            </p>
+          </div>
+          <div class="expirient-item">
+            <div class="expirient-icon expirient-icon__04"></div>
+            <p>
+              <span>375</span>
+              Wins Awards
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section id="7" class="section-form">
+      <div class="wrapper">
+        <h2 class="titel-h2 text-centr">Get in Touch</h2>
+        <p class="text-centr after-titel">
+          Have you any quistion? Send me message without hesitated
+        </p>
+        <div class="form-container">
+          <div class="note"></div>
+          <div class="fields">
+            <form class="form" action="">
+              <input
+                class="form-input"
+                name="name"
+                type="text"
+                placeholder="Your Full Name"
+              />
+              <input
+                class="form-input"
+                name="email"
+                type="email"
+                placeholder="Email Address"
+              />
+              <textarea
+                class="form-textrea"
+                name="message"
+                placeholder="Your Message"
+              ></textarea>
+              <input
+                type="submit"
+                name="submit"
+                class="form-container__btn btn"
+                value="Send Message"
+              />
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+    <footer>
+      <div class="wrapper">
+        <div class="footer">
+          <span>&copy; Copyright 2020 iGlyphic. All rights reserved</span>
+          <ul class="social-network">
+            <li class="social-network__item">
+              <a href="#" class="social-network__link" target="_blank"
+                ><i class="zmdi zmdi-facebook"></i
+              ></a>
+            </li>
+            <li class="social-network__item">
+              <a href="#" class="social-network__link" target="_blank"
+                ><i class="zmdi zmdi-instagram"></i
+              ></a>
+            </li>
+            <li class="social-network__item">
+              <a href="#" class="social-network__link" target="_blank"
+                ><i class="zmdi zmdi-google-plus"></i
+              ></a>
+            </li>
+            <li class="social-network__item">
+              <a href="#" class="social-network__link" target="_blank"
+                ><i class="zmdi zmdi-github"></i
+              ></a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/contactform.js"></script>
+    <script src="./js/script.js"></script>
+  </body>
+</html>
