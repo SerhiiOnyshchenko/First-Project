@@ -84,7 +84,7 @@ body {
 }
 
 .main {
-  background-image: url(..//img/bg.jpg);
+  background-image: url(../img/bg.jpg);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
